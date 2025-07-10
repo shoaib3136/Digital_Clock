@@ -25,7 +25,7 @@ function updateClock() {
 
   const hrs = hours.toString().padStart(2, "0");
 
-  // Animate colon blinking by toggling visibility every second
+  
   const colon = now.getSeconds() % 2 === 0 ? ":" : "<span class='blink'>:</span>";
 
   clock.innerHTML = `${hrs}${colon}${minutes}${colon}${seconds}`;
@@ -33,7 +33,7 @@ function updateClock() {
 
   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   dateEl.innerText = now.toLocaleDateString(undefined, options);
-}
+}   
 
 setInterval(updateClock, 1000);
 updateClock();
